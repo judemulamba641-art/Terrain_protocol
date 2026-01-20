@@ -1,0 +1,64 @@
+# ===============================
+# Brownie configuration
+# ===============================
+
+project_structure:
+  contracts: contracts
+  tests: tests
+  scripts: scripts
+  reports: reports
+
+# ===============================
+# Compiler settings
+# ===============================
+compiler:
+  vyper:
+    version: 0.3.10
+    optimize: true
+    evm_version: shanghai
+
+# ===============================
+# Networks
+# ===============================
+networks:
+  default: development
+
+  development:
+    gas_limit: auto
+    gas_price: auto
+    reverting_tx_gas_limit: false
+
+  mainnet-fork:
+    cmd_settings:
+      fork: https://eth-mainnet.alchemyapi.io/v2/${ALCHEMY_API_KEY}
+      chain_id: 1
+    gas_limit: auto
+    gas_price: auto
+
+# ===============================
+# Accounts (for tests only)
+# ===============================
+accounts:
+  default: dev
+
+# ===============================
+# Dependencies (optional)
+# ===============================
+dependencies: []
+
+# ===============================
+# Test configuration
+# ===============================
+pytest:
+  addopts: >
+    -v
+    --maxfail=1
+    --disable-warnings
+
+# ===============================
+# Gas reporting (optional)
+# ===============================
+reports:
+  exclude_paths:
+    - contracts/mocks
+    - contracts/test
