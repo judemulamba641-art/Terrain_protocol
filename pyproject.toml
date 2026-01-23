@@ -1,0 +1,31 @@
+---
+
+# 📦 pyproject.toml (PROPRE & MODERNE)
+
+```toml
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "terrain-protocol-tests"
+version = "0.1.0"
+description = "Test & simulation framework for Terrain Protocol DeFi"
+authors = [
+  { name="Terrain Protocol DAO" }
+]
+readme = "README.md"
+requires-python = ">=3.9"
+
+dependencies = []
+
+[tool.pytest.ini_options]
+addopts = "-ra -q"
+testpaths = ["tests"]
+
+[tool.black]
+line-length = 100
+target-version = ["py39"]
+
+[tool.isort]
+profile = "black"
