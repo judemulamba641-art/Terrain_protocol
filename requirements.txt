@@ -20,7 +20,7 @@ eth-brownie>=1.20.0
 # Testing & Quality
 # ============================================================
 pytest>=7.4
-hypothesis>=6.80
+hypothesis>6
 
 # ============================================================
 # Simulations & Math (stress tests, économie)
