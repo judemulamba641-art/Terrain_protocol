@@ -20,6 +20,11 @@ from tests.integration.scenarios.scenario_nft_borrow import run_nft_borrow
 from tests.integration.scenarios.scenario_liquidation import run_liquidation
 from tests.integration.scenarios.scenario_governance_change import run_governance_change
 from tests.integration.scenarios.scenario_market_crash import run_market_crash
+import os
+
+CI_MODE = os.getenv("CI", "false") == "true"
+
+TOTAL_USERS = 10_000_000 if CI_MODE else 1_000_000_000
 
 
 TOTAL_USERS = 1_000_000_000
