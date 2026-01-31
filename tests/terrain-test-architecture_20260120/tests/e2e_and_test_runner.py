@@ -26,8 +26,6 @@ CI_MODE = os.getenv("CI", "false") == "true"
 
 TOTAL_USERS = 10_000_000 if CI_MODE else 1_000_000_000
 
-
-TOTAL_USERS = 1_000_000_000
 BATCH_SIZE = 10_000
 MAX_WORKERS = 16
 
